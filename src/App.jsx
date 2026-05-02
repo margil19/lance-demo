@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import { Analytics } from '@vercel/analytics/react'
 import FleetOverview from './components/FleetOverview'
 import PropertyDetail from './components/PropertyDetail'
 import EscalationsTab from './components/EscalationsTab'
@@ -50,6 +51,7 @@ export default function App() {
         )}
         {activeTab === 'escalations' && <EscalationsTab />}
       </main>
+      <Analytics />
     </div>
   )
 }
